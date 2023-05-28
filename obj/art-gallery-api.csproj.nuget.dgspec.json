@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/harithadenuwan/Desktop/Deakin University/Year 2/Trimester 1/SIT331 Secure Backend Services/Tasks/5.1HD/art-gallery-api/art-gallery-api.csproj": {}
+  },
+  "projects": {
+    "/Users/harithadenuwan/Desktop/Deakin University/Year 2/Trimester 1/SIT331 Secure Backend Services/Tasks/5.1HD/art-gallery-api/art-gallery-api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/harithadenuwan/Desktop/Deakin University/Year 2/Trimester 1/SIT331 Secure Backend Services/Tasks/5.1HD/art-gallery-api/art-gallery-api.csproj",
+        "projectName": "art-gallery-api",
+        "projectPath": "/Users/harithadenuwan/Desktop/Deakin University/Year 2/Trimester 1/SIT331 Secure Backend Services/Tasks/5.1HD/art-gallery-api/art-gallery-api.csproj",
+        "packagesPath": "/Users/harithadenuwan/.nuget/packages/",
+        "outputPath": "/Users/harithadenuwan/Desktop/Deakin University/Year 2/Trimester 1/SIT331 Secure Backend Services/Tasks/5.1HD/art-gallery-api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/harithadenuwan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "EntityFrameworkCore.Scaffolding.Handlebars": {
+              "target": "Package",
+              "version": "[7.0.0-beta1, )"
+            },
+            "FastMember.Signed": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.0-preview.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
