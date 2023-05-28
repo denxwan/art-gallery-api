@@ -28,11 +28,11 @@ public class ArtifactsController : ControllerBase
         return _artifactsRepo.GetArtifacts();
     }
 
-    // [HttpGet("square")]
-    // public IEnumerable<Map> GetSquareMapsOnly()
-    // {
-    //     return _mapRepo.GetSquareMapsOnly();
-    // }
+    [HttpGet("in-gallery")]
+    public IEnumerable<Artifact> GetArtifactsInGallery()
+    {
+        return _artifactsRepo.GetArtifactsInGallery();
+    }
 
     [HttpGet("{id}", Name = "GetArtifact")]
     public IActionResult GetArtifactById(int id)

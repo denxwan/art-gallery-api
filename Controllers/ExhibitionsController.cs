@@ -28,8 +28,8 @@ public class ExhibitionsController : ControllerBase
         return _exhibitionsRepo.GetExhibitions();
     }
 
-    // [HttpGet("square")]
-    // public IEnumerable<Map> GetSquareMapsOnly()
+    // [HttpGet("inGallery")]
+    // public IEnumerable<Artifact> GetArtifactsInGallery()
     // {
     //     return _mapRepo.GetSquareMapsOnly();
     // }

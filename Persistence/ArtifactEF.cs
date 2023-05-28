@@ -26,6 +26,12 @@ public class ArtifactEF : IRepository, IArtifactDataAccess
     //     return context.Maps.Where(x => listOfMaps.Contains(x.Id)).ToList();
     // }
 
+    public List<Artifact> GetArtifactsInGallery()
+    {
+        var listOfArtifacts = context.Artifacts.Where(x => x.IsInGallery==true).Select(x=> x.ArtifactId);
+        return context.Artifacts.Where(x => listOfArtifacts.Contains(x.ArtifactId)).ToList();
+    }
+
     public Artifact InsertArtifact(Artifact newArtifact)
     {
         // newArtifact.CreatedDate = DateTime.Now;
