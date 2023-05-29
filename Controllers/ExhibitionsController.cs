@@ -28,11 +28,11 @@ public class ExhibitionsController : ControllerBase
         return _exhibitionsRepo.GetExhibitions();
     }
 
-    // [HttpGet("inGallery")]
-    // public IEnumerable<Artifact> GetArtifactsInGallery()
-    // {
-    //     return _mapRepo.GetSquareMapsOnly();
-    // }
+    [HttpGet("coming-soon")]
+    public IEnumerable<Exhibition> GetExhibitionsComingSoon()
+    {
+        return _exhibitionsRepo.GetExhibitionsComingSoon();
+    }
 
     [HttpGet("{id}", Name = "GetExhibitions")]
     public IActionResult GetExhibitionById(int id)

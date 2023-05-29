@@ -28,11 +28,17 @@ public class UsersController : ControllerBase
         return _usersRepo.GetUsers();
     }
 
-    // [HttpGet("square")]
-    // public IEnumerable<Map> GetSquareMapsOnly()
-    // {
-    //     return _mapRepo.GetSquareMapsOnly();
-    // }
+    [HttpGet("admin")]
+    public IEnumerable<User> GetAdminUsersOnly()
+    {
+        return _usersRepo.GetAdminUsersOnly();
+    }
+
+    [HttpGet("member")]
+    public IEnumerable<User> GetMemebersOnly()
+    {
+        return _usersRepo.GetMemebersOnly();
+    }
 
     [HttpGet("{id}", Name = "GetUsers")]
     public IActionResult GetUserById(int id)

@@ -36,7 +36,7 @@ public class ArtifactEF : IRepository, IArtifactDataAccess
     {
         // newArtifact.CreatedDate = DateTime.Now;
         // newArtifact.AcquiredDate = DateTime.Now;
-
+        newArtifact.AddedDate = DateTime.Now;
         context.Artifacts.Add(newArtifact);
         context.SaveChanges();
         var artifacts = GetArtifacts();

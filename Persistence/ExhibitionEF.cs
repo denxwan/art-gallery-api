@@ -20,11 +20,12 @@ public class ExhibitionEF : IRepository, IExhibitionDataAccess
         return context.Exhibitions.ToList();
     }
 
-    // public List<Artifact> GetSquareMapsOnly()
-    // {
-    //     var listOfMaps = context.Maps.Where(x => x.IsSquare==true).Select(x => x.Id);
-    //     return context.Maps.Where(x => listOfMaps.Contains(x.Id)).ToList();
-    // }
+    public List<Exhibition> GetExhibitionsComingSoon()
+    {
+        var today = DateTime.Now;
+        var listOfExhibitions = context.Exhibitions.Where(x => x.ExhibitionDate.CompareTo(today) > 0).Select(x => x.ExhibitionDate);
+        return context.Exhibitions.Where(x => listOfExhibitions.Contains(x.ExhibitionDate)).ToList();
+    }
 
     public Exhibition InsertExhibition(Exhibition newExhibition)
     {

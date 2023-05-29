@@ -26,11 +26,24 @@ public class UserEF : IRepository, IUserDataAccess
     //     return context.Maps.Where(x => listOfMaps.Contains(x.Id)).ToList();
     // }
 
+    public List<User> GetAdminUsersOnly()
+    {
+        var listOfUsers = context.Users.Where(x => x.Role.Equals("admin")).Select(x => x.UserId);
+        return context.Users.Where(x => listOfUsers.Contains(x.UserId)).ToList();
+    }
+
+    public List<User> GetMemebersOnly()
+    {
+        var listOfUsers = context.Users.Where(x => x.HaveMembership==true).Select(x => x.UserId);
+        return context.Users.Where(x => listOfUsers.Contains(x.UserId)).ToList();
+    }
+
     public User InsertUser(User newUser)
     {
         // newArtifact.CreatedDate = DateTime.Now;
         // newArtifact.AcquiredDate = DateTime.Now;
-
+        newUser.Createddate = DateTime.Now;
+        newUser.Modifieddate = DateTime.Now;
         context.Users.Add(newUser);
         context.SaveChanges();
         var users = GetUsers();
