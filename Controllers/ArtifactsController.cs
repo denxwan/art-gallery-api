@@ -3,6 +3,7 @@ using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using art_gallery_api.Persistence;
 using art_gallery_api.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace art_gallery_api.Controllers;
 
@@ -50,6 +51,7 @@ public class ArtifactsController : ControllerBase
     // -- INSERT COMMANDS --
 
     [HttpPost()]
+    [EnableCors("AllowOrigin")]
     public IActionResult AddArtifact(Artifact newArtifact)
     {
         if(newArtifact == null)
